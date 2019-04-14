@@ -1,0 +1,219 @@
+html, body{
+  color: #000;
+  font-size: 15px;
+  font-family: "PT Sans Regular";
+}
+
+button {
+  padding: 0;
+  border: none;
+  font: inherit;
+  background-color: transparent;
+  cursor: pointer; }
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+b, a {
+  display: inline-block;
+
+}
+
+* {
+
+  box-sizing: border-box;
+
+}
+
+.display-f {
+
+  display: flex;
+
+}
+
+a, ul, p, fieldset {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  line-height: 1.5em;
+  border: 0;
+}
+
+.container {
+  margin: auto;
+  max-width: 1050px;
+
+  &_width1150{
+    
+    max-width: 1150px;
+    position: relative;
+    &::after{
+
+      content: '';
+      width: 100%;
+      display: block;
+      background-color: #000;
+      opacity: 0.2;
+      height: 1px;
+      position: absolute;
+    }
+  }
+
+}
+
+.header{
+  background-color: #fff;
+  &__nav{
+    padding: 0 50px;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 24px;
+  }
+}
+
+
+.nav-top{
+
+  &__menu{
+    max-width: 415px;
+  }
+
+}
+
+.menu{
+  align-items: center;
+  &__item{
+    position: relative;
+    margin-right:35px;
+    &:first-child::after{
+      content: '';
+      width: 1px;
+      display: block;
+      background-color: #000;
+      opacity: 0.2;
+      height: 100%;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+  }
+
+  &__link{
+    font-family: "Open Sans Bold";
+    font-size: 17px;
+    color: #000;
+    line-height: 24px;
+    padding: 32px 25px;
+    padding-left: 0;
+    &:hover{
+      opacity: 0.6;
+    }
+  }
+
+}
+
+.logo{
+  
+  &__img{
+    background-image: url("../../img/svg/logo.svg");
+    width: 150px;
+    height: 75px;
+    display: inline-block;
+    background-size:contain;
+  }
+}
+
+
+.menu-right{
+
+  &_width350{
+    width: 350px;
+  }
+
+  &__item{
+
+    position: relative;
+    height: 88px;
+    padding: 33px;
+    &_search{
+      width: 82px;
+    }
+
+    &_cart{
+      padding-left: 82px;
+    }
+
+
+    &::before
+    {
+      content: '';
+      position: absolute;
+      width: 1px;
+      height: 100%;
+      background-color: #000;
+      top: 0;
+      left: 0;
+      opacity: 0.2;
+    }
+
+  }
+
+  &__wrap{
+    position: absolute;
+    display: none;
+  }
+
+  &__icon
+  {
+
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 50%;
+    margin-top: -10px;
+
+
+    &_search{
+      left: 50%;
+      margin-left: -10px;
+
+      svg{
+        opacity: 1;
+        &:hover{
+          opacity: .5;
+        }
+
+      }
+    }
+
+    &_cart
+    {
+      left: 30px;
+
+      svg{
+        opacity: .3;
+        &:hover{
+          opacity: 1;
+          fill: #63d1bb;
+          cursor: pointer;
+        }
+      }
+
+    }
+
+  }
+
+  &__cart-text{
+    font-family: "Open Sans Bold";
+    font-size: 17px;
+    line-height: 24px;
+  }
+}
+
+.block{
+  background-color: #f4f4f4;
+}
