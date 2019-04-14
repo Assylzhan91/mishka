@@ -4,6 +4,10 @@ html, body{
   font-family: "PT Sans Regular";
 }
 
+h1, h2, h3, h4, h5, h6{
+  margin: 0;
+}
+
 button {
   padding: 0;
   border: none;
@@ -48,9 +52,9 @@ a, ul, p, fieldset {
   max-width: 1050px;
 
   &_width1150{
-    
     max-width: 1150px;
     position: relative;
+    margin-bottom: 1px;
     &::after{
 
       content: '';
@@ -63,6 +67,11 @@ a, ul, p, fieldset {
     }
   }
 
+  &_zigzag{
+    position: relative;
+   
+
+  }
 }
 
 .header{
@@ -114,6 +123,26 @@ a, ul, p, fieldset {
     }
   }
 
+
+  &__link_pad25{
+    padding-top: 25px;
+  }
+  &__item_right{
+    margin-left: auto;
+    margin-right: 0;
+
+    .text{
+      font-family: "Open Sans Regular";
+      font-size: 15px;
+      line-height: 24px;
+      color: #444444;
+      text-transform: uppercase;
+    }
+  }
+
+  &__item_no-after:first-child::after{
+    display: none;
+  }
 }
 
 .logo{
@@ -140,11 +169,14 @@ a, ul, p, fieldset {
     height: 88px;
     padding: 33px;
     &_search{
-      width: 82px;
+      min-width: 82px;
     }
 
     &_cart{
       padding-left: 82px;
+      padding-right: 0;
+      width: 100%;
+      text-align: right;
     }
 
 
@@ -192,7 +224,7 @@ a, ul, p, fieldset {
 
     &_cart
     {
-      left: 30px;
+      left: 50px;
 
       svg{
         opacity: .3;
@@ -215,5 +247,85 @@ a, ul, p, fieldset {
 }
 
 .block{
-  background-color: #f4f4f4;
+  background-color: #f9f9f9;
+  &_zigzag{
+    position: relative;
+    &::after{
+      content: '';
+      display: block;
+      background-image: url(../../img/svg/zigzag.svg);
+      height: 30px;
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+    }
+  }
+  &__title{
+    background-image: url(../../img/hero-desktop.png);
+    height: 530px;
+    background-size: 100%;
+    background-position: 100%;
+  }
+
+  &__types{
+    justify-content: space-between;
+  }
+}
+
+.title-content{
+  &__text{
+    font-family: "Open Sans Bold";
+    font-size: 53px;
+    text-align: center;
+    width: 700px;
+    margin: auto;
+  }
+}
+
+
+.types{
+
+  li{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__item{
+    width: 50%;
+    padding: 30px 35px;
+    padding-bottom: 35px;
+    position: relative;
+
+    &_left{
+      background-color: #63d1bb;
+    }
+
+    &_right{
+      background-color: #56c3b2;
+    }
+  }
+
+  &__text{
+    color: #fff;
+    line-height: 30px;
+    font-size: 20px;
+    text-transform: uppercase;
+  }
+
+  &__icon{
+    height: 62px;
+    background-position:center center ;
+    background-repeat: no-repeat;
+
+    &_interior{
+      background-image: url(../../img/svg/interior-icon.svg);
+      width: 42px;
+    }
+
+    &_toy{
+      background-image: url(../../img/svg/toys-icon.svg);
+      width: 62px;
+    }
+
+  }
 }
