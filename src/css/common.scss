@@ -67,11 +67,6 @@ a, ul, p, fieldset {
     }
   }
 
-  &_zigzag{
-    position: relative;
-   
-
-  }
 }
 
 .header{
@@ -249,15 +244,19 @@ a, ul, p, fieldset {
 .block{
   background-color: #f9f9f9;
   &_zigzag{
+    margin-bottom: 70px;
     position: relative;
     &::after{
       content: '';
       display: block;
-      background-image: url(../../img/svg/zigzag.svg);
+      background-image: url(../../img/svg/zigzag-fill.svg);
       height: 30px;
       width: 100%;
       position: absolute;
       bottom: 0;
+      background-repeat: no-repeat;
+      background-size: cover;
+      margin-bottom: -1px;
     }
   }
   &__title{

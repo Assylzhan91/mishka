@@ -52,8 +52,6 @@ a, ul, p, fieldset {
       opacity: 0.2;
       height: 1px;
       position: absolute; }
-  .container_zigzag {
-    position: relative; }
 
 .header {
   background-color: #fff; }
@@ -175,15 +173,19 @@ a, ul, p, fieldset {
 .block {
   background-color: #f9f9f9; }
   .block_zigzag {
+    margin-bottom: 70px;
     position: relative; }
     .block_zigzag::after {
       content: '';
       display: block;
-      background-image: url(../../img/svg/zigzag.svg);
+      background-image: url(../../img/svg/zigzag-fill.svg);
       height: 30px;
       width: 100%;
       position: absolute;
-      bottom: 0; }
+      bottom: 0;
+      background-repeat: no-repeat;
+      background-size: cover;
+      margin-bottom: -1px; }
   .block__title {
     background-image: url(../../img/hero-desktop.png);
     height: 530px;

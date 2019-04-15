@@ -11,7 +11,8 @@ const gulp         = require("gulp"),
 
 const allCssFile = [
     'node_modules/normalize.css/normalize.css',
-    'src/css/common.scss'
+    'src/css/common.scss',
+    'src/css/content.scss'
 ];
 
 
