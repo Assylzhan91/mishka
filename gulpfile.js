@@ -15,12 +15,17 @@ const allCssFile = [
     'src/css/content.scss'
 ];
 
+const allJsFile = [
+    'node_modules/jquery/dist/jquery.min.js',
+    'src/js/javascript.js'
+];
+
 
 function js() {
 
-    return   gulp.src("src/js/**/*.js")
+    return   gulp.src(allJsFile)
         // .pipe(polyfiller('javascript.js'))
-        .pipe(uglify())
+        // .pipe(uglify())
         .pipe(gulp.dest("js/"))
         .pipe(browserSync.stream());
 }
