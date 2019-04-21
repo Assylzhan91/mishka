@@ -297,3 +297,23 @@ a, ul, p, fieldset {
   .social__link_fb {
     width: 20px;
     height: 40px; }
+
+.development_mod {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 150px; }
+
+.development__text {
+  font-family: "Open Sans SemiBold";
+  text-transform: uppercase; }
+
+.development__wool {
+  background-image: url(../../img/svg/wool.svg);
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  background-position: center;
+  background-size: contain; }

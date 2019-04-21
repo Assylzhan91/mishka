@@ -399,3 +399,25 @@ a, ul, p, fieldset {
 
 
 }
+
+.development{
+  &_mod{
+    align-items: flex-end;
+    justify-content: space-around;
+    width: 150px;
+  }
+  &__text{
+    font-family: "Open Sans SemiBold";
+
+    text-transform: uppercase;
+
+  }
+  &__wool{
+    background-image: url(../../img/svg/wool.svg);
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    background-position: center;
+    background-size: contain;
+  }
+}
